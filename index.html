@@ -5,34 +5,61 @@
   <title>Korean Quick Type</title>
   <meta charset="UTF-8">
   <script src="scripts.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="koreanstyle.css">
 </head>
 
 <body>
 
-  <div class="gradient-background"></div>
-  <div class="header">
-    <h1 class="text"><span class="blue">korean</span><span class="white">quick</span>type</h1>
-    <p class="text"><span class="score">score:</span></p>
+
+
+  <div class="wrapper">
+    <div>
+    </div>
+    <div class="text-size-2">
+      <h1><span class="blue ">korean</span><span class="white drop-shadow">quick</span><span class="red drop-shadow">type</span></h1>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+    <div class="text-size-1">
+      <div class="nested drop-shadow">
+        <div>
+          <p><span class="score">score:</span></p>
+        </div>
+        <div>
+          <span id="timerShow">Time:</span>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
-  <div class="tooltip">Help
-    <span class="tooltiptext">Match the Korean character shown on the left, by typing the QWERTY keyboard equivalent</span>
+
+  <div class="wrapper2">
+    <div class="gameletter">
+      <img id="letterShow">
+    </div>
+    <div class="three-to-four">
+      <img id="usrInput">
+    </div>
   </div>
 
-  <div>
-    <p class="start" onclick="startGame();"><span>start</span></p>
-  </div>
-  <div id="letter">
-    <div id="timer">
-      <span id="timerShow"></span>
-      <img id="letterShow"></div>
-    <!---SHOW USER INPUT -->
-    <img id="usrInput"></div>
+  <div class="wrapper3">
+    <div class="one-to-four drop-shadow text-size-2">
+      <p id="userLetters"></p>
+    </div>
+    <div class="bg-blue">
+    </div>
+    <div class="bg-blue text-size-3">
+      <p class="start" onclick="startGame();"><span>start</span></p>
+    </div>
+    <div class="bg-blue">
+    </div>
 
-  </div>
-  </div>
+
+
 </body>
 
 </html>

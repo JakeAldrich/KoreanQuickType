@@ -1,160 +1,106 @@
-html,body {
-  width: 100%;
-  height: 100%;
-  margin:0;
-  padding:0;
-}
-
 body {
   background-color: #2980B9;
   overflow: hidden;
-}
-
-.tooltip {
-    position: fixed;
-    display: inline-block;
-    font-size: 30px;
-    font-family: helvetica;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #ECF0F1;
-    left: 26%;
-    top: 23%;
-    z-index: 1;
-}
-
-.tooltip .tooltiptext {
-    font-size: 14px;
-    visibility: hidden;
-    background-color: #2C3E50;
-    color: #fff;
-    text-align: left;
-    padding: 5px ;
-    border-radius: 6px;
-    position: absolute;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-.tooltip .tooltiptext {
-    top: -5px;
-    left: 105%;
-}
-
-#usrInput {
-    position: fixed;
-    top: 45%;
-    left: 60%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-#letterShow {
-  position: fixed;
-  top: 45%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#timerShow {
-  position: fixed;
-  color: #ECF0F1;
-  font-family: helvetica;
-  font-size: 50px;
-  text-align: center;
-  top: 90%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.gradient-background{
-  width: 300%;
-  min-width: 100%;
-  height: 260%;
-  left: 50%;
-  top: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: fixed;
-  background-color: #2980B9;
-  -webkit-background-image: radial-gradient(circle, transparent 0%, #3498DB 100%), url("noise.png");
-  background-image: radial-gradient(circle, transparent 0%, #3498DB 75%), url("noise.png") ;
-  background-repeat: repeat;
-  -webkit-background-size: auto;
-  background-size: auto;
-  background-position: center;
-  z-index: 0;
-}
-
-.header{
-  position: fixed;
-  width: 100%;
-  text-align: center;
-}
-
-.text{
-  position: fixed;
-  left: 25%;
-  font-size: 70px;
-  line-height: 1;
   font-family: helvetica;
   text-transform: uppercase;
   font-weight: 900;
+  color: #ECF0F1;
+}
+
+img {
+  filter: drop-shadow(0 0 2px #000)
+}
+
+.text-size-1 {
+  font-size: 1.25em;
+}
+
+.text-size-2 {
+  font-size: 1.5em;
+}
+
+.text-size-3 {
+  font-size: 2.5em;
+}
+
+.text-size-4 {
+  font-size: 2em;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 2px #000)
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.wrapper2 {
+  display: grid;
+  padding: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(300px, auto);
+  grid-auto-columns: minmax(300px, auto);
+}
+
+.wrapper3 {
+  display: grid;
+  padding: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1em;
+  grid-auto-rows: minmax(110px, auto);
+  justify-items: center;
+}
+
+.three-to-four {
+  grid-column: 3/4;
+}
+
+.one-to-four {
+  grid-column: 1/4;
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gameletter {
+  grid-column: 2/3;
+  justify-self: end;
+}
+
+.start {
+  justify-self: center;
+  line-height: 1;
+  background: #2C3E50;
+  text-align: center;
+}
+
+.start:hover span {
+  display: none
+}
+
+.start:hover:before {
   color: #E74C3C;
-  top: 12%;
-  margin: 0;
+  content: "시작";
 }
 
-  .text .blue{
-    color: #2C3E50
-}
-
-  .text .white{
-    color: #ECF0F1;
-}
-
-  .text .score{
-    position: fixed;
-    left: 26%;
-    font-size: 30px;
-    font-family: helvetica;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #ECF0F1;
-    top: 20%;
-}
-
-.start{
-  position: fixed;
-  bottom: 1%;
-  min-height: 100px;
-  width: 100%;
-  text-align: center;
-  font-size: 100px;
-  line-height: 1;
-  font-family: helvetica;
-  text-transform: uppercase;
-  font-weight: 900;
+.white {
   color: #ECF0F1;
-  background-color:#2C3E50;
 }
 
-  .start:hover span {
-    display:none
+.blue {
+  color: #2C3E50;
 }
 
-  .start:hover:before {
-    color: #E74C3C;
-    content: "시작";
+.red {
+  color: #E74C3C;
+}
+
+.bg-blue {
+  justify-self: stretch;
+  background: #2C3E50;
 }
